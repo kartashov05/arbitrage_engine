@@ -1,0 +1,43 @@
+app:
+  log_level: info
+
+market_data:
+  update_speed: 100ms
+  book_snapshot_limit: 1000
+
+symbols:
+  - BTCUSDT
+  - ETHUSDT
+  - SOLUSDT
+  - XRPUSDT
+  - DOGEUSDT
+  - ADAUSDT
+  - LINKUSDT
+  - AVAXUSDT
+  - LTCUSDT
+  - TRXUSDT
+
+exchanges:
+  binance:
+    enabled: true
+    ws_base_url: "wss://stream.binance.com:9443"
+    rest_base_url: "https://api.binance.com"
+    max_streams_per_connection: 200
+
+  mexc:
+    enabled: true
+    ws_base_url: "wss://wbs-api.mexc.com/ws"
+    rest_base_url: "https://api.mexc.com"
+    max_streams_per_connection: 30
+
+arbitrage:
+  min_net_spread_bps: 10
+  max_book_age_ms: 500
+  min_notional_usdt: 20
+  max_notional_usdt: 1000
+
+fees:
+  binance:
+    taker_bps: 10
+  mexc:
+    taker_bps: 10
